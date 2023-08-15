@@ -25,10 +25,17 @@ function App() {
           },
           element: <Topics></Topics>
         },
-        { path: 'home', element: <Home></Home> },
+        {
+          path: 'home',
+          loader: () => {
+            return fetch('https://openapi.programming-hero.com/api/quiz');
+          },
+          element:<Content></Content>
+        },
         {path:'chart', element:<Chart></Chart>}
       ]
-    }
+    },
+    {path:'*', element: <h1 className="text-center text-5xl">Not Found 404 !!!</h1>}
   ])
 
   return (

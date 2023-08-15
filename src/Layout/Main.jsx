@@ -4,7 +4,7 @@ import Headers from '../components/Headers/Headers';
 
 const Main = () => {
     return (
-        <div>
+        <div className='relative'>
             <Headers></Headers>
             <Outlet></Outlet>
         </div>

@@ -8,12 +8,14 @@ const Content = () => {
     console.log(topics);
     return (
         <div>
-            <h1 className='text-5xl text-center text-blue-400 italic'>Check YourSelf</h1>
+            <h1 className='text-5xl text-center text-blue-700
+            my-4 italic'>Check YourSelf</h1>
             <div className='grid lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2 gap-2 mx-20 mt-4'>
             {
                 topics.map(subject => <Subject
                     key={subject.id}
                     subject={subject}
+                    totall={topics.totall}
                 ></Subject>)
             }
             </div>

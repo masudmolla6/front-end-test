@@ -11,3 +11,5 @@ Currently, two official plugins are available:
 #FrontEnd Test App
 
 I made a Quiz App.In this app i used react router.And  i also used some react hooks,and i used heroIcon, rechart.used tailwind css as a css framwork.
+
+Live Website-https://64db9ff5f005107b665dfac3--thriving-beignet-feaed7.netlify.app/home

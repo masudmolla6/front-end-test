@@ -38,10 +38,7 @@ function App() {
         },
         {
           path: 'chart',
-          element: <Chart></Chart>,
-          loader: () => {
-            return fetch('https://openapi.programming-hero.com/api/quiz');
-          }
+          element: <Chart></Chart>
         }
       ]
     },

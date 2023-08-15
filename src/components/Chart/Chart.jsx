@@ -1,19 +1,33 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
-import Rechart from '../Rechart/Rechart';
+import { Bar, BarChart, XAxis, YAxis } from 'recharts';
 
 const Chart = () => {
-    const allData= useLoaderData();
-    const allTopics = allData.data;
+    const data = [
+        {
+            name: 'React',
+            totall:8
+        },
+        {
+            name: 'Javascript',
+            totall:9
+        },
+        {
+            name: 'Css',
+            totall:8
+        },
+        {
+            name: 'Git',
+            totall:11
+        },
+    ]
+
     return (
-        <div>
-            <h1>This is Chart page.</h1>
-            {
-                allTopics.map(chartData => <Rechart
-                    key={chartData.id}
-                    chartData={chartData}
-                ></Rechart>)
-            }
+        <div className='flex justify-center'>
+            <BarChart width={500}  height={500} data={data}>
+                <Bar dataKey="totall"></Bar>
+                <XAxis dataKey="name"></XAxis>
+                <YAxis dataKey="totall"></YAxis>
+            </BarChart>
         </div>
     );
 };

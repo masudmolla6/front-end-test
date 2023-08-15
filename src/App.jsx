@@ -1,8 +1,8 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import Main from "./Layout/Main"
-import Home from "./components/Home/Home"
 import Content from "./components/Content/Content"
 import Chart from "./components/Chart/Chart"
+import Questions from "./components/Questions/Questions"
 import Topics from "./components/Topics/Topics"
 
 function App() {
@@ -32,7 +32,17 @@ function App() {
           },
           element:<Content></Content>
         },
-        {path:'chart', element:<Chart></Chart>}
+        {
+          path: 'questions',
+          element:<Questions></Questions>
+        },
+        {
+          path: 'chart',
+          element: <Chart></Chart>,
+          loader: () => {
+            return fetch('https://openapi.programming-hero.com/api/quiz');
+          }
+        }
       ]
     },
     {path:'*', element: <h1 className="text-center text-5xl">Not Found 404 !!!</h1>}

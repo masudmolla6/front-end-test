@@ -10,7 +10,7 @@ const Headers = () => {
             </div>
             <div>
                 <Link className='text-xl mr-8 border px-2 py-1 rounded bg-gray-500 text-white hover:bg-cyan-400' to='home'>Home</Link>
-                <Link className='text-xl mr-8 border px-2 py-1 rounded bg-gray-500 text-white hover:bg-cyan-400' to='content'>Content</Link>
+                <Link className='text-xl mr-8 border px-2 py-1 rounded bg-gray-500 text-white hover:bg-cyan-400' to='questions'>Questions</Link>
                 <Link className='text-xl mr-8 border px-2 py-1 rounded bg-gray-500 text-white hover:bg-cyan-400' to='chart'>Chart</Link>
             </div>
         </div>
